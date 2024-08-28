@@ -21,7 +21,7 @@ public class PostService
         };
     }
 
-    public async Task<ObservableCollection<Post>> FetchPosts()
+    public async Task<ObservableCollection<Post>?> FetchPosts()
     {
         Uri uri = new("https://jsonplaceholder.typicode.com/posts");
 

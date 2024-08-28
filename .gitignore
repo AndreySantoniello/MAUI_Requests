@@ -570,6 +570,7 @@ FodyWeavers.xsd
 # Fody - auto-generated XML schema
 
 # VS Code files for those working on multiple tools
+.vscode
 
 # Local History for Visual Studio Code
 

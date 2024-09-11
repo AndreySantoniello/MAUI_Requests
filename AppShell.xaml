@@ -7,9 +7,16 @@
     Shell.FlyoutBehavior="Disabled"
     Title="HTTPClient">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:PostView}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:PostView}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Todos"
+            ContentTemplate="{DataTemplate local:TodoView}" 
+            Route="MainPage" />
+    </TabBar>
 
 </Shell>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HTTPClient.Views.TodoView"
+             Title="TodoView">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button Text="Carregar Todos" 
+                    Command="{Binding getTodosCommand}" 
+                    BackgroundColor="#FFEAAE" 
+                    TextColor="#22223B" 
+                    CornerRadius="15" 
+                    WidthRequest="200"/>
+            <CollectionView ItemsSource="{Binding Todos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+                            <Frame
+                                CornerRadius="15"
+                                HasShadow="True"
+                                Margin="20, 20, 0, 0"
+                                WidthRequest="200">
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" TextColor="#0A0903"/>
+                                    <CheckBox IsChecked="{Binding Completed}" Color="#FFC100"/>
+                                </StackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

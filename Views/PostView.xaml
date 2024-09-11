@@ -4,14 +4,31 @@
              x:Class="HTTPClient.Views.PostView"
              Title="PostView">
     <ScrollView>
-        <VerticalStackLayout>
-            <Button Text="Carregar Posts" Command="{Binding getPostsCommand}" />
+        <VerticalStackLayout HorizontalOptions="Center"
+                             Margin="0,20, 0, 0">
+            <Frame HeightRequest="2" 
+                   BackgroundColor="Black"/>
+            <Button Text="Carregar Posts" 
+                    Command="{Binding getPostsCommand}" 
+                    BackgroundColor="#FFEAAE" 
+                    TextColor="#22223B" 
+                    CornerRadius="15" 
+                    WidthRequest="200"
+                    Margin="0,20,0,0"/>
             <CollectionView ItemsSource="{Binding Posts}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout>
-                            <Label Text="{Binding Title}" />
-                            <Label Text="{Binding Body}" />
+                            <Frame
+                                CornerRadius="15"
+                                HasShadow="True"
+                                Margin="0, 20, 0, 0"
+                                WidthRequest="200">
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="#0A0903"/>
+                                    <Label Text="{Binding Body}"/>
+                                </StackLayout>
+                            </Frame>
                         </VerticalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
